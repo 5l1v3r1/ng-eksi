@@ -17,9 +17,6 @@ export class SidebarComponent implements OnInit {
 
     this._http.get("http://80.209.224.120:5000/today").subscribe(data => {
       this.entrylist = data["Topics"];
-      this.entrylist.forEach(element => {
-        element["link"] = element.Title.replace(/ /g,"-");
-      });
     },
     err => {
       alert("Api Unavaible. /today")
@@ -33,9 +30,7 @@ test
     this.entrylist = [];
     this._http.get("http://80.209.224.120:5000/popular").subscribe(data => {
       this.entrylist = data["Topics"];
-      this.entrylist.forEach(element => {
-        element["link"] = element.Title.replace(/ /g,"-");
-      });
+
     },
     err => {
       alert("Api Unavaible. /popular")
