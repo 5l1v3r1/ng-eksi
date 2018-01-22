@@ -1,0 +1,67 @@
+.sidebar{
+        width:250px;
+        font-size: 14px;
+        padding-top: 60px;
+        position: fixed;
+}
+
+.list-type{
+
+}
+
+.list-type ul{
+        padding: 0px;
+        margin: 0px;
+        list-style: none;
+        padding-top: 10px;
+        padding-left: 38px;
+}
+
+.list-type li{
+        float: left;
+        background: white;
+        padding: 4px 8px 4px 8px;
+        border-radius: 5px;
+        cursor: pointer;
+        width: 60px;
+        text-align: center;
+
+}
+
+.list-type li:hover{
+        background: #8FB550;
+        color: white;
+}
+
+.list-type li:nth-child(even){
+        margin-left: 20px;
+
+}
+
+
+.titles ul{
+        margin-top:35px;
+        list-style: none;
+        padding: 0px;
+        overflow: hidden;
+        height: calc(100vh - 120px);
+
+}
+
+.titles ul li{
+        margin: 10px;
+        padding: 0px;
+        margin:5px;
+        margin-bottom: 5px;
+        background: #EDEBEC;
+        padding: 10px;
+        border-radius: 3px;
+        cursor: pointer;
+        color: gray;
+}
+
+.titles ul li:hover{
+        background: rgb(218, 218, 218);
+        color: black;
+        
+}

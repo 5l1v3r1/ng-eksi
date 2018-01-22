@@ -1,0 +1,31 @@
+nav {
+        height: 60px;
+        width: 100%;
+        background-color: #EDEBEC;
+        position: fixed;
+
+}
+
+nav #logo {
+        height: 30px;
+        margin-top: 15px;
+        opacity: 0;
+}
+
+nav #search-textbox {
+        margin: 0px;
+        position: absolute;
+        display: block;
+        top: 15px;
+        font-size: 14px;
+        border: none;
+        padding: 6px 3px 6px 6px;
+        outline: none;
+        margin-left: 20px;
+        border: 1px solid #8FB550;
+        border-radius: 5px;
+        color: gray;
+        width: 300px;
+        /* background: url("/assets/search.png") no-repeat scroll 3px 3px;
+        padding-left: 30px; */
+}

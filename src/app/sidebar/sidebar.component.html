@@ -1,0 +1,15 @@
+<div class="sidebar">
+  <div class="list-type">
+    <ul>
+      <li (click)="getToday()">Bugün</li>
+      <li (click)="getPopular()">Gündem</li>
+    </ul>
+  </div>
+
+  <div class="titles">
+    <ul>
+      <li routerLink="/entry/{{item.link}}" *ngFor="let item of entrylist">{{item.Title}} </li>
+    </ul>
+  </div>
+
+</div>
