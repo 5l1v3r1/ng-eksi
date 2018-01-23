@@ -1,9 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
-
+@import url("//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css");
 body{
         margin: 0px;
         font-family: 'Roboto', sans-serif;
-        background: rgb(250, 250, 250);
+        background: #3E3D40;
 }
 
 .container{
