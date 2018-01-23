@@ -67,6 +67,15 @@
         background-color: rgb(114, 114, 114);
 }
 
+.titles .active{
+        background: #54A650;
+        color: white;;
+}
+
+.titles li:focus{
+        outline: none;
+}
+
 .preloader{
         width: 100px;
         height: 100px;
