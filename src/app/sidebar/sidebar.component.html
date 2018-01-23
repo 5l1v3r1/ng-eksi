@@ -1,4 +1,7 @@
 <div class="sidebar">
+  <div class="preloader" *ngIf="showpreloader">
+    <div class="ring"></div>
+  </div>
   <div class="list-type">
     <ul>
       <li (click)="getToday()">Bugün</li>

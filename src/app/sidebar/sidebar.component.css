@@ -66,3 +66,30 @@
 .titles li:hover{
         background-color: rgb(114, 114, 114);
 }
+
+.preloader{
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        top: 60px;
+        left: 70px;
+}
+
+.preloader .ring{
+        width: 30px;
+        height: 30px;
+        border: 3px solid #54A650;
+        border-radius: 50%;
+        margin-top: 30px;
+        margin-left: 30px;
+        -webkit-animation-name: bounce; /* Safari 4.0 - 8.0 */
+        -webkit-animation-duration:0.14s; /* Safari 4.0 - 8.0 */
+        animation-name: bounce ;
+        animation-duration: 0.14s;
+        animation-iteration-count: infinite;
+}
+@keyframes bounce {
+        0% {transform: scale(0.7)}
+        50% {transform: scale(1.4)}
+        100% {transform: scale(1)}
+    }
