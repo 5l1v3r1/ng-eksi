@@ -35,10 +35,11 @@
         padding: 5px;
         margin: 15px 5px 5px 5px;
         width: 100px;
-        background-color: #54A650;
         border-radius: 10px;
         color: white;
         cursor: pointer;
+        border: 1px solid #54A650;
+        font-size: 14px;
 }
 
 .titles{
@@ -60,4 +61,8 @@
         padding: 5px 10px 5px 10px;
         cursor: pointer;
 
+}
+
+.titles li:hover{
+        background-color: rgb(114, 114, 114);
 }
