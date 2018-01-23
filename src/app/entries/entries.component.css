@@ -1,44 +1,39 @@
-.entries{
-        padding-top: 70px;
+.entries {
+        padding-top: 80px;
         float: left;
         width: 950px;
         margin-left: 300px;
-
+        min-height: 400px;
 }
 
-.entries ul{
-        margin: 0px;
-        padding: 0px;
-        list-style: none;
-}
-
-.entries li{
-        padding: 20px;
-        border-radius: 4px;
+.entries .box {
+        background-color: rgb(95, 95, 95);
+        padding: 10px;
+        position: relative;
         font-size: 14px;
-        margin-bottom: 10px;
-        padding-bottom: 20px;
-        background: #EDEBEC;
+        border-radius: 10px;
+        padding-bottom: 40px;
+        border: 1px solid rgb(124, 124, 124);
+        margin-bottom: 20px;
+        z-index: 0;
 }
 
-.author{
+.box .content {
+        padding: 10px;
+        color: rgb(226, 226, 226);
+}
+
+.entries .box .footer {
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        width: 100%;
+        border-top: 2px solid rgb(124, 124, 124);
+}
+
+.entries .footer div {
         float: right;
-        margin-left: 15px;
-        position: relative;
-        bottom: 10px;
-
-}
-
-.date{
-        float: right;
-        position: relative;
-        bottom: 10px;
-        color: rgb(128, 128, 128);
-}
-
-.content{
-        padding-bottom: 10px;
-        display: block;
-        text-indent: 20px;
-        color: rgb(94, 94, 94);
+        margin: 8px;
+        color: rgb(179, 179, 179);
+        cursor: default;
 }

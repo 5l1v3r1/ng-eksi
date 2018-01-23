@@ -1,5 +1,5 @@
 <div class="entries">
- <ul>
+ <!-- <ul>
     <li *ngFor="let entry of entries">
       <span class="content">
         {{entry.Content}}
@@ -7,5 +7,25 @@
       <span class="author">bilmemne</span>
       <span class="date">tarih</span>
     </li>
- </ul>
+ </ul> -->
+
+<div class="box" *ngFor="let item of entries">
+  <div class="content">{{ item.Content }}</div>
+  <div class="footer">
+    <div class="author">
+      <span class="fa fa-user"></span>
+      <span> {{ item.Author.Nick}} </span>
+    </div>
+    <div class="date">
+      <span class="fa fa-clock-o"></span>
+      <span> {{item.Created | date}} </span>
+    </div>
+    <div class="star">
+      <span class="fa fa-star"></span>
+      <span> {{ item.FavoriteCount}} </span>
+    </div>
+  </div>
+</div>
+
+
 </div>

@@ -3,6 +3,7 @@ nav{
         height: 60px;
         background: #191919;
         position: fixed;
+        z-index: 100;
 }
 .logo{
         width: 200px;
