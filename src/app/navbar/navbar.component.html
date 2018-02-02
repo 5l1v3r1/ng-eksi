@@ -1,20 +1,11 @@
 <div class="navbar">
   <img id="logo" src="assets/logo.png" alt="" srcset="">
   <div class="searchBar">
-    <input type="text" name="" id="searchBox" (blur)="onBlur()" (focus)="onFocus()">
+    <input type="text" (input)="onSearchChange($event.target.value)" name="" id="searchBox" (blur)="onBlur()" (focus)="onFocus()">
     <i class="fas fa-search"></i>
     <div class="autoCompleteWrapper" *ngIf="autoCompleteVisible">
         <ul>
-          <li>anan</li>
-          <li>baban</li>
-          <li>abin</li>
-          <li>dayın</li>
-          <li>amcan</li>
-          <li>anan</li>
-          <li>baban</li>
-          <li>abin</li>
-          <li>dayın</li>
-          <li>amcan</li>
+          <li *ngFor="let result of autoCompleteResults">{{ result }}</li>
         </ul>
     </div>
   </div>
