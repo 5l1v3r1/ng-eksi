@@ -8,6 +8,17 @@ import { Component, OnInit } from '@angular/core';
 export class NavbarComponent implements OnInit {
 
   constructor() { }
+  autoCompleteVisible:boolean = false;
+
+  onFocus(){
+    console.log("focus");
+    this.autoCompleteVisible = true;
+  }
+
+  onBlur(){
+    console.log("Blur");
+    this.autoCompleteVisible = false;
+  }
 
   ngOnInit() {
   }
