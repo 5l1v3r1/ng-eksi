@@ -44,6 +44,7 @@ $bg: #373737;
                         border: 1px solid $ac
                         border-radius: 0px 0px 5px 5px;
                         overflow-y: auto
+                        animation: ani 0.2s
 
                         &:before
                                 content: ""
@@ -78,3 +79,9 @@ $bg: #373737;
                         position: relative
                         left: -22px
                         top: 20px
+
+@keyframes ani
+        0%
+                max-height: 0px
+        100%
+                opacity: 150px
