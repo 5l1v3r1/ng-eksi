@@ -1,6 +1,6 @@
 import { Component, Input, OnInit ,EventEmitter, Output } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
-import { query } from '@angular/core/src/animation/dsl';
+import { fail } from 'assert';
 
 @Component({
   selector: 'app-navbar',
@@ -13,12 +13,13 @@ export class NavbarComponent implements OnInit {
   constructor(private _http: HttpClient) { }
 
   autoCompleteResults: any;
-  query:string;
+  pickedItem:string;
   selectedTitle:string = "";
+  searchBoxText:string;
+  optionVisible:boolean = false;
 
   onSearchChange(searchValue: string) {
-    
-    console.log(searchValue);
+    this.searchBoxText = searchValue;
     if (searchValue != '') {
       this.autoCompleteVisible = true;
       this._http.get("http://80.209.224.120:5000/autocomplete/" + searchValue).
@@ -28,25 +29,25 @@ export class NavbarComponent implements OnInit {
         err => {
           console.log("hata");
         })
-
     }
     else {
       this.autoCompleteVisible = false;
       this.autoCompleteResults = [];
     }
-
-
   }
 
 
   autoCompleteVisible: boolean = false;
   onFocus() {
-    console.log("focus");
-    this.autoCompleteVisible = true;
+    if(this.searchBoxText == ""){
+      this.autoCompleteVisible = true;
+    }
+    else{
+      this.autoCompleteVisible= false;
+    }
     
   }
   onBlur() {
-    console.log("Blur");
     // this.autoCompleteVisible = false;
   }
 
@@ -55,13 +56,18 @@ export class NavbarComponent implements OnInit {
   }
   
   autocompletePick(item:string){
-    console.log(item)
-    this.query = item;
+    this.pickedItem = item;
     this.selectedTitle = item;
+    this.autoCompleteVisible = false;
+  }
 
-    
-    
-    
+  toggleOption(){
+    if(this.optionVisible == false){
+      this.optionVisible = true
+    }
+    else{
+      this.optionVisible = false;
+    }
   }
 
   ngOnInit() {

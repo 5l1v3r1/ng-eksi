@@ -1,5 +1,5 @@
 <div class="navbar">
-  <img id="logo" src="assets/logo.png" alt="" srcset="">
+  <img (click) = "toggleOption()" id="logo" src="assets/logo.png" alt="" srcset="">
   <div class="searchBar">
     <input [value]="selectedTitle" type="text" (input)="onSearchChange($event.target.value)" name="" id="searchBox" (blur)="onBlur()" (focus)="onFocus()">
     <i class="fas fa-search"></i>
@@ -10,5 +10,8 @@
         </ul>
     </div>
   </div>
-  
+  <div *ngIf = "optionVisible" class="entryListOption">
+    <div class="option">Popüler</div>
+    <div class="option">Bugün</div>
+  </div>
 </div>

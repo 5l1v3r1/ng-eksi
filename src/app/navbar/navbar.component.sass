@@ -22,6 +22,7 @@ $bg: #373737;
                 float: left
                 width: calc(100% - 51px)
                 margin-left: 10px
+                
 
                 .background
                         
@@ -32,7 +33,7 @@ $bg: #373737;
                         right: 0px
                         background-color: #000;
                         opacity: 0.5;
-                        z-index: -1
+                        z-index: -1000
                 
 
                 #searchBox
@@ -92,8 +93,33 @@ $bg: #373737;
                         left: -22px
                         top: 20px
 
+        .entryListOption
+                position: relative
+                width: 100%;
+                height: 30px
+                background: gray;
+                margin-top: 60px;
+                z-index: -13
+                animation: fromtop .25s
+
+                .option
+                        float: left;
+                        width: 50%
+                        text-align: center;
+                        margin-top: 5px;
+                        
+
+
 @keyframes ani
         0%
                 max-height: 0px
         100%
                 opacity: 150px
+
+@keyframes fromtop
+        0%
+                font-size: 3px
+                height: 0px
+        100%
+                font-size: 16px
+                height: 30px
