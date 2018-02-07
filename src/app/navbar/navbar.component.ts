@@ -22,7 +22,7 @@ export class NavbarComponent implements OnInit {
     this.searchBoxText = searchValue;
     if (searchValue != '') {
       this.autoCompleteVisible = true;
-      this._http.get("http://80.209.224.120:5000/autocomplete/" + searchValue).
+      this._http.get("https://eksi-sozluk.herokuapp.com/autocomplete/" + searchValue).
         subscribe(data => {
           this.autoCompleteResults = data['Titles'];
         },

@@ -1,5 +1,5 @@
 
-$ac: #56A857;
+$ac: #84c44e;
 $bg: #373737;
 
 .navbar
@@ -8,7 +8,9 @@ $bg: #373737;
         width: 100%
         border-top: 3px solid $ac
         position: fixed;
-        
+        -webkit-box-shadow: 0px 2px 15px -2px rgba(0,0,0,0.56);
+        -moz-box-shadow: 0px 2px 15px -2px rgba(0,0,0,0.56);
+        box-shadow: 0px 2px 15px -2px rgba(0,0,0,0.56);
 
         #logo
                 width: 30px
@@ -35,6 +37,7 @@ $bg: #373737;
                         background-color: #000;
                         opacity: 0.5;
                         z-index: -1000
+                        overflow: hidden
                 
 
                 #searchBox
