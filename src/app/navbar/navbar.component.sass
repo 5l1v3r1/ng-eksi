@@ -18,6 +18,7 @@ $bg: #373737;
                 margin-left: 11px
                 display: block
                 float: left
+                animation: swing 1s
         
         .searchBar
                 position: relative
@@ -127,3 +128,17 @@ $bg: #373737;
         100%
                 font-size: 16px
                 height: 30px
+
+@keyframes swing
+        0%
+                transform: rotateZ(0deg)
+        50%
+                transform: rotateZ(0deg)
+        60%
+                transform: rotateZ(-20deg)
+        70%
+                transform: rotateZ(20deg) scale(1.2)
+        80%
+                transform: rotateZ(-20deg) scale(1)
+        100%
+                transform: rotateZ(0deg)
