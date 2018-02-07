@@ -17,7 +17,7 @@ export class EntriesComponent implements OnInit {
 
   getEntries(id:string) {
     this.entries = [];
-    this._http.get("https://eksi-sozluk.herokuapp.com/topic/" + id).subscribe(data => {
+    this._http.get("https://eksisozluk.denizer.com/" + id).subscribe(data => {
       this.entries = data["Entries"];
       window.scrollTo(0, 0);
 
