@@ -9,6 +9,8 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { EntriesComponent } from './entries/entries.component';
 
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+
 const appRoutes: Routes = [
   { path: 'entry/:title', component: EntriesComponent },
 ];
@@ -23,7 +25,8 @@ const appRoutes: Routes = [
     BrowserModule,
     HttpClientModule,
     FormsModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

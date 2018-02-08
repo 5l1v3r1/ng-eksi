@@ -1,6 +1,10 @@
-<div class="entryContainer">
+<div class="entryContainer" [@listAnimation]="entries.length">
+  
+  <div class="preloader" *ngIf="preloaderVisible">
+    <div class="bg"></div>
+  </div>
 
-  <div class="entry" *ngFor="let item of entries">
+  <div class="entry" *ngFor="let item of entries" >
     <div class="content">{{ item.Content }}</div>
     <div class="footer">
       <div class="prop">
