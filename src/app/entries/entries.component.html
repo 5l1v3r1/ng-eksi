@@ -1,10 +1,10 @@
 <div class="entryContainer">
-  
+
   <div class="preloader" *ngIf="preloaderVisible">
     <div class="bg"></div>
   </div>
 
-  <div class="entry" *ngFor="let item of entries" >
+  <div class="entry" *ngFor="let item of entries.Entries">
     <div class="content">{{ item.Content }}</div>
     <div class="footer">
       <div class="prop">
@@ -24,6 +24,14 @@
         <span> {{ item.Id}} </span>
       </div> -->
     </div>
+  </div>
+
+  <div class="pagination" *ngIf="entries.Entries.length > 1">
+    <i class="fas fa-fast-backward"></i>
+    <i class="fas fa-step-backward"></i>
+    <i class="cur" >{{entries.PageIndex}} / {{entries.PageCount}}</i>
+    <i class="fas fa-step-forward"></i>
+    <i class="fas fa-fast-forward"></i>
   </div>
 
 </div>

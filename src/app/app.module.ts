@@ -11,7 +11,7 @@ import { EntriesComponent } from './entries/entries.component';
 
 
 const appRoutes: Routes = [
-  { path: 'entry/:title', component: EntriesComponent },
+  { path: 'entry/:title/:pageNo', component: EntriesComponent },
 ];
 
 @NgModule({

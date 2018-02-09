@@ -6,7 +6,7 @@
     <div class="autoCompleteWrapper" *ngIf="autoCompleteVisible">
       <div (click) = "backgroundClick()" class="background"></div>
         <ul>
-          <li routerLink="/entry/{{result}}" (click) = "autocompletePick(result)" *ngFor="let result of autoCompleteResults">{{ result }}</li>
+          <li routerLink="/entry/{{result}}/1" (click) = "autocompletePick(result)" *ngFor="let result of autoCompleteResults">{{ result }}</li>
         </ul>
     </div>
   </div>

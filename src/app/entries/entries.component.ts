@@ -18,12 +18,12 @@ export class EntriesComponent implements OnInit {
     console.log("anan");
   }
 
-  getEntries(id:string) {
+  getEntries(id:string, page:number) {
     this.preloaderVisible = true;
     this.entries = [];
-    this._http.get("https://eksisozluk.denizer.com/topic/" + id).subscribe(data => {
+    this._http.get("https://eksisozluk.denizer.com/topic/" + id + "/" + page).subscribe(data => {
       this.preloaderVisible = false;
-      this.entries = data["Entries"];
+      this.entries = data;
       
       window.scrollTo(0, 0);
 
@@ -38,7 +38,8 @@ export class EntriesComponent implements OnInit {
   ngOnInit() {
     this.route.params.forEach(params => {
       let userId = params["title"];
-      this.getEntries(userId);
+      let pageNo = params["pageNo"];
+      this.getEntries(userId,pageNo);
     })
     const id = this.route.snapshot.paramMap.get('title');
     // console.log(id);
