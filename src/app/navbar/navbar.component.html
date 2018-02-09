@@ -2,13 +2,17 @@
   <img (click) = "toggleOption()" id="logo" src="assets/logo.png" alt="" srcset="">
   <div class="searchBar">
     <input [value]="selectedTitle" type="text" (input)="onSearchChange($event.target.value)" name="" id="searchBox" (blur)="onBlur()" (focus)="onFocus()">
-    <i class="fas fa-search"></i>
+    <i class="fas fa-search"></i>    
     <div class="autoCompleteWrapper" *ngIf="autoCompleteVisible">
       <div (click) = "backgroundClick()" class="background"></div>
         <ul>
           <li routerLink="/entry/{{result}}/1" (click) = "autocompletePick(result)" *ngFor="let result of autoCompleteResults">{{ result }}</li>
         </ul>
     </div>
+  </div>
+  <div class="list">
+    <i class="fas fa-fire"></i>
+    <i class="fas fa-calendar-alt"></i>
   </div>
   <div *ngIf = "optionVisible" class="entryListOption">
     <div class="option">Popüler</div>
