@@ -127,6 +127,53 @@ $bg: #373737;
                         width: 50%
                         text-align: center;
                         margin-top: 5px;
+        
+        .popular
+                position: fixed
+                background: $ac
+                top: 0px
+                bottom: 0px
+                right: 0px
+                left: 0px
+                z-index: 99
+                overflow: hidden
+                animation: slideIn 0.3s
+                animation-timing-function: ease-in
+
+
+                .fa-window-close
+                        color: white 
+                        font-size: 25px
+                        float: right
+                        margin: 13px
+                
+                p 
+                        padding: 0px
+                        margin: 20px
+                        font-size: 22px
+                        color: $bg 
+
+
+                ul 
+                        list-style: none
+                        padding: 0px
+                        margin: 20px 20px 0px 20px
+                        height: calc(100% - 90px)
+                        overflow-y: auto
+                        
+                        li
+                                margin: 0px
+                                padding: 0px
+                                font-size: 20px
+                                color: white
+                                padding: 5px
+                                margin-bottom: 3px
+                                line-height: 20px
+
+
+
+
+
                         
 
 
@@ -159,3 +206,9 @@ $bg: #373737;
                 transform: rotateZ(-20deg) scale(1)
         100%
                 transform: rotateZ(0deg)
+
+@keyframes slideIn
+        0%
+                transform: translateX(100%)
+        100%
+                transform: translateX(0%)

@@ -16,6 +16,9 @@ export class NavbarComponent implements OnInit {
   pickedItem:string;
   selectedTitle:string = "";
   searchBoxText:string;
+  autoCompleteVisible: boolean = false;
+  popularVisible:boolean = false;
+  popularTitles:any;
 
   onSearchChange(searchValue: string) {
     this.searchBoxText = searchValue;
@@ -35,8 +38,24 @@ export class NavbarComponent implements OnInit {
     }
   }
 
+  getPopular(){
+    this._http.get("https://eksisozluk.denizer.com/popular").subscribe(
+      data => {this.popularTitles = data['Topics'];
+      this.popularVisible = true;
+    
+    },
+      err => {console.log("hata: gündem entry'leri çekilemedi");}
+    )
 
-  autoCompleteVisible: boolean = false;
+
+  }
+
+  closeListWindow(){
+    this.popularVisible = false;
+  }
+
+
+
   onFocus() {
     if(this.searchBoxText == ""){
       this.autoCompleteVisible = true;

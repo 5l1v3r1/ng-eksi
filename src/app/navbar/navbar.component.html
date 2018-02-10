@@ -1,7 +1,7 @@
 <div class="navbar">
   <img id="logo" src="assets/logo.png" alt="" srcset="">
   <div class="searchBar">
-    <input [value]="selectedTitle" type="text" (input)="onSearchChange($event.target.value)" name="" id="searchBox" (blur)="onBlur()" (focus)="onFocus()">
+    <input placeholder="Başlık ara..." [value]="selectedTitle" type="text" (input)="onSearchChange($event.target.value)" name="" id="searchBox" (blur)="onBlur()" (focus)="onFocus()">
     <i class="fas fa-search"></i>    
     <div class="autoCompleteWrapper" *ngIf="autoCompleteVisible">
       <div (click) = "backgroundClick()" class="background"></div>
@@ -11,7 +11,16 @@
     </div>
   </div>
   <div class="list">
-    <i class="fas fa-fire"></i>
+    <i class="fas fa-fire" (click)="getPopular()"></i>
     <i class="fas fa-calendar-alt"></i>
+  </div>
+  <div class="popular" *ngIf="popularVisible">
+
+    <i class="fas fa-window-close" (click) = "closeListWindow()"></i>
+    <p><i class="fas fa-fire"></i> Gündem</p>
+    <ul>
+      <li *ngFor="let title of popularTitles" >{{title.Title}} ({{title.MatchedCount}})</li>     
+    </ul>
+    <div class="background"></div>
   </div>
 </div>

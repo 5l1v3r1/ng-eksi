@@ -28,7 +28,7 @@
 
   <div class="pagination" *ngIf="entries.Entries">
     <i routerLink="/entry/{{entries.Title}}/1" *ngIf="entries.PageIndex != 1" class="fas fa-fast-backward"></i>
-    <i *ngIf="entries.PageIndex != 1" class="fas fa-step-backward"></i>
+    <i routerLink="/entry/{{entries.Title}}/{{entries.PageIndex-1}}" *ngIf="entries.PageIndex != 1" class="fas fa-step-backward"></i>
     <i class="cur" >{{entries.PageIndex}} / {{entries.PageCount}}</i>
     <i routerLink="/entry/{{entries.Title}}/{{entries.PageIndex+1}}" *ngIf="entries.PageIndex != entries.PageCount" class="fas fa-step-forward"></i>
     <i  routerLink="/entry/{{entries.Title}}/{{entries.PageCount}}" *ngIf="entries.PageIndex != entries.PageCount" class="fas fa-fast-forward"></i>
