@@ -18,6 +18,7 @@ export class NavbarComponent implements OnInit {
   searchBoxText:string;
   autoCompleteVisible: boolean = false;
   popularVisible:boolean = false;
+  todayVisible:boolean = false;
   popularTitles:any;
 
   onSearchChange(searchValue: string) {
@@ -46,12 +47,22 @@ export class NavbarComponent implements OnInit {
     },
       err => {console.log("hata: gündem entry'leri çekilemedi");}
     )
-
-
   }
+
+  getToday(){
+    this._http.get("https://eksisozluk.denizer.com/today").subscribe(
+      data => {this.popularTitles = data['Topics'];
+      this.todayVisible = true;
+    
+    },
+      err => {console.log("hata: gündem entry'leri çekilemedi");}
+    )
+  }
+
 
   closeListWindow(){
     this.popularVisible = false;
+    this.todayVisible = false;
   }
 
 

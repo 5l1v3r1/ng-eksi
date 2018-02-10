@@ -128,7 +128,7 @@ $bg: #373737;
                         text-align: center;
                         margin-top: 5px;
         
-        .popular
+        .fullscreenList
                 position: fixed
                 background: $ac
                 top: 0px
@@ -137,8 +137,8 @@ $bg: #373737;
                 left: 0px
                 z-index: 99
                 overflow: hidden
-                animation: slideIn 0.3s
-                animation-timing-function: ease-in
+                animation: slideIn .5s
+                animation-timing-function: cubic-bezier(0.64, 0.57, 0.67, 1.53);
 
 
                 .fa-window-close
@@ -209,6 +209,6 @@ $bg: #373737;
 
 @keyframes slideIn
         0%
-                transform: translateX(100%)
+                transform: scale(0)
         100%
-                transform: translateX(0%)
+                transform: scale(1)
