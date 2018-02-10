@@ -19,7 +19,7 @@
     <i class="fas fa-window-close" (click) = "closeListWindow()"></i>
     <p><i class="fas fa-fire"></i> Gündem</p>
     <ul>
-      <li *ngFor="let title of popularTitles" >{{title.Title}} ({{title.MatchedCount}})</li>     
+      <li (click)="closeListWindow()" routerLink="/entry/{{title.Title}}/1" *ngFor="let title of popularTitles" >{{title.Title}} ({{title.MatchedCount}})</li>     
     </ul>
     <div class="background"></div>
   </div>
@@ -28,7 +28,7 @@
     <i class="fas fa-window-close" (click) = "closeListWindow()"></i>
     <p><i class="fas fa-calendar-alt"></i> Bugün</p>
     <ul>
-      <li *ngFor="let title of popularTitles" >{{title.Title}} ({{title.MatchedCount}})</li>     
+      <li (click)="closeListWindow()" routerLink="/entry/{{title.Title}}/1" *ngFor="let title of popularTitles" >{{title.Title}} ({{title.MatchedCount}})</li>     
     </ul>
     <div class="background"></div>
   </div>
