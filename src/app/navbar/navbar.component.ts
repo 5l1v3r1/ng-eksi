@@ -16,7 +16,6 @@ export class NavbarComponent implements OnInit {
   pickedItem:string;
   selectedTitle:string = "";
   searchBoxText:string;
-  optionVisible:boolean = false;
 
   onSearchChange(searchValue: string) {
     this.searchBoxText = searchValue;
@@ -59,15 +58,6 @@ export class NavbarComponent implements OnInit {
     this.pickedItem = item;
     this.selectedTitle = item;
     this.autoCompleteVisible = false;
-  }
-
-  toggleOption(){
-    if(this.optionVisible == false){
-      this.optionVisible = true
-    }
-    else{
-      this.optionVisible = false;
-    }
   }
 
   ngOnInit() {
