@@ -6,7 +6,7 @@
     <div class="autoCompleteWrapper" *ngIf="autoCompleteVisible">
       <div (click) = "backgroundClick()" class="background"></div>
         <ul>
-          <li routerLink="/entry/{{result}}/1" (click) = "autocompletePick(result)" *ngFor="let result of autoCompleteResults">{{ result }}</li>
+          <li routerLink="/entry/{{result | characterEscape}}/1" (click) = "autocompletePick(result)" *ngFor="let result of autoCompleteResults">{{ result }}</li>
         </ul>
     </div>
   </div>
@@ -19,7 +19,7 @@
     <i class="fas fa-window-close" (click) = "closeListWindow()"></i>
     <p><i class="fas fa-fire"></i> Gündem</p>
     <ul>
-      <li (click)="closeListWindow()" routerLink="/entry/{{title.Title}}/1" *ngFor="let title of popularTitles" >{{title.Title}} ({{title.MatchedCount}})</li>     
+      <li (click)="closeListWindow()" routerLink="/entry/{{title.Title | characterEscape}}/1" *ngFor="let title of popularTitles" >{{title.Title}} ({{title.MatchedCount}})</li>     
     </ul>
     <div class="background"></div>
   </div>
@@ -28,7 +28,7 @@
     <i class="fas fa-window-close" (click) = "closeListWindow()"></i>
     <p><i class="fas fa-calendar-alt"></i> Bugün</p>
     <ul>
-      <li (click)="closeListWindow()" routerLink="/entry/{{title.Title}}/1" *ngFor="let title of popularTitles" >{{title.Title}} ({{title.MatchedCount}})</li>     
+      <li (click)="closeListWindow()" routerLink="/entry/{{title.Title | characterEscape }}/1" *ngFor="let title of popularTitles" >{{title.Title}} ({{title.MatchedCount}})</li>     
     </ul>
     <div class="background"></div>
   </div>
