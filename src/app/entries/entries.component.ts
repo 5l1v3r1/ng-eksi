@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Pipe, PipeTransform } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
@@ -10,7 +10,11 @@ import { Location } from '@angular/common';
 })
 
 
+
+
 export class EntriesComponent implements OnInit {
+
+  
   entries: any;
   preloaderVisible:boolean = false;
   constructor(private _http: HttpClient, private route: ActivatedRoute, private location: Location) {

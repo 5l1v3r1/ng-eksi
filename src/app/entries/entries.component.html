@@ -5,7 +5,7 @@
   </div>
 
   <div class="entry" *ngFor="let item of entries.Entries">
-    <div class="content">{{ item.Content }}</div>
+    <div class="content">{{ item.Content | bkz }}</div>
     <div class="footer">
       <div class="prop">
         <span class="fa fa-user"></span>

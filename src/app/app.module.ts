@@ -9,6 +9,7 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { EntriesComponent } from './entries/entries.component';
 
+import {BakinizPipe} from './bakiniz.pipe';
 
 const appRoutes: Routes = [
   { path: 'entry/:title/:pageNo', component: EntriesComponent },
@@ -18,7 +19,8 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     NavbarComponent,
-    EntriesComponent
+    EntriesComponent,
+    BakinizPipe
   ],
   imports: [
     BrowserModule,
