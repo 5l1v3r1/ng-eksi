@@ -1,11 +1,10 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
-@Pipe({name: 'bkz'})
+@Pipe({ name: 'bkz' })
 export class BakinizPipe implements PipeTransform {
-  transform(value: string,  params: any) {
-          console.log(params);
-          return "<div>adasda</div>";
-          
+  transform(value: string) {
+    return value.replace(/\(bkz: (.*)\)/g, "<a href=\"/entry/$1\">$1</a>");
+
   }
 }
 

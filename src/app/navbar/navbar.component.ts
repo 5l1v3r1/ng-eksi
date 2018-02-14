@@ -1,5 +1,6 @@
 import { Component, Input, OnInit ,EventEmitter, Output } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
+import { Router } from '@angular/router';
 import { fail } from 'assert';
 
 @Component({
@@ -10,7 +11,7 @@ import { fail } from 'assert';
 
 
 export class NavbarComponent implements OnInit {
-  constructor(private _http: HttpClient) { }
+  constructor(private _http: HttpClient, private router: Router) { }
 
   autoCompleteResults: any;
   pickedItem:string;
@@ -23,7 +24,7 @@ export class NavbarComponent implements OnInit {
 
   onSearchChange(searchValue: string) {
     this.searchBoxText = searchValue;
-    if (searchValue != '') {
+    if (searchValue.length > 3) {
       this.autoCompleteVisible = true;
       this._http.get("https://eksisozluk.denizer.com/autocomplete/" + searchValue).
         subscribe(data => {
@@ -59,6 +60,9 @@ export class NavbarComponent implements OnInit {
     )
   }
 
+  routeTitle(title:string){
+    this.router.navigateByUrl('entry/' + title + '/1');
+  }
 
   closeListWindow(){
     this.popularVisible = false;

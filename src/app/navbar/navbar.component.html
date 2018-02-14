@@ -1,7 +1,7 @@
 <div class="navbar">
   <img id="logo" src="assets/logo.png" alt="" srcset="">
   <div class="searchBar">
-    <input placeholder="Başlık ara..." [value]="selectedTitle" type="text" (input)="onSearchChange($event.target.value)" name="" id="searchBox" (blur)="onBlur()" (focus)="onFocus()">
+    <input placeholder="Başlık ara..." [value]="selectedTitle" type="text" (keyup.enter)="routeTitle($event.target.value)" (input)="onSearchChange($event.target.value)" name="" id="searchBox" (blur)="onBlur()" (focus)="onFocus()">
     <i class="fas fa-search"></i>    
     <div class="autoCompleteWrapper" *ngIf="autoCompleteVisible">
       <div (click) = "backgroundClick()" class="background"></div>
