@@ -62,6 +62,7 @@ export class NavbarComponent implements OnInit {
 
   routeTitle(title:string){
     this.router.navigateByUrl('entry/' + title + '/1');
+    this.autoCompleteVisible = false;
   }
 
   closeListWindow(){
