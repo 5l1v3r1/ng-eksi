@@ -18,8 +18,6 @@ export class EntriesComponent implements OnInit {
   entries: any;
   preloaderVisible:boolean = false;
   constructor(private _http: HttpClient, private route: ActivatedRoute, private location: Location) {
-
-    console.log("anan");
   }
 
   getEntries(id:string, page:number) {

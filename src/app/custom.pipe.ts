@@ -2,8 +2,10 @@ import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({name: 'bkz'})
 export class BakinizPipe implements PipeTransform {
-  transform(value: string) {
+  transform(value: string,  params: any) {
+          console.log(params);
           return "<div>adasda</div>";
+          
   }
 }
 
