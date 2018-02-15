@@ -2,6 +2,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({ name: 'bkz' })
 export class BakinizPipe implements PipeTransform {
+  
   transform(value: string, params: any) {
     // Normal bkz
     value = value.replace(/\(bkz: ?([^)]+)\)/g, (match, p1: any) => {
@@ -16,6 +17,11 @@ export class BakinizPipe implements PipeTransform {
     // Yildizli bkz
     value = value.replace(/`:([^`]+)`/g, (match, p1: any) => {
       return `<a href="/entry/${p1}/1">*</a>`;
+    });
+
+    // Links   
+    value = value.replace(/\[([^ ]+) (.*)\]/g, (match, p1: any) => {
+      return `<a href="${p1}">${p1}</a>`;
     });
 
     return value;

@@ -37,14 +37,15 @@ export class EntriesComponent implements OnInit {
   }
 
 
+
   ngOnInit() {
     this.route.params.forEach(params => {
       let userId = params["title"];
       let pageNo = params["pageNo"];
       this.getEntries(userId,pageNo);
+      
     })
     const id = this.route.snapshot.paramMap.get('title');
-    // console.log(id);
 
   }
 }
