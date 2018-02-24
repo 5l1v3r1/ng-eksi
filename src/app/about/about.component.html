@@ -1,0 +1,12 @@
+<div class="about">
+    <i routerLink="/" class="fas fa-window-close"></i>
+<h2>ng-eksi</h2>
+<p>Ng-eksi is my personal project. I have nothing to do with Ekşisözlük, nor their API, and I do not offer any support for anything you may build on top of this. Eksisozluk is a product of <a href="http://eksiteknoloji.com/">Eksi Teknoloji</a>.</p>
+<p><i class="fas fa-user"></i> https://github.com/denizyesilirmak/ </p>
+<p><i class="fab fa-github-alt"></i> https://github.com/denizyesilirmak/ng-eksi </p>
+<p><i class="fas fa-code"></i> last commits:</p>
+
+<ul>
+  <li *ngFor="let commit of last_commits"> <img src="{{ commit.author.avatar_url }}" alt=""> {{commit.commit.message }} <a href="http://">{{commit.sha}}</a> </li>
+</ul>
+</div>

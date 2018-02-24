@@ -1,5 +1,5 @@
 <div class="navbar">
-  <img id="logo" src="assets/logo.png" alt="" srcset="">
+  <img routerLink="/about" id="logo" src="assets/logo.png" alt="" srcset="">
   <div class="searchBar">
     <input placeholder="Başlık ara..." [value]="selectedTitle" type="text" (keyup.enter)="routeTitle($event.target.value)" (input)="onSearchChange($event.target.value)" name="" id="searchBox" (blur)="onBlur()" (focus)="onFocus()">
     <i class="fas fa-search"></i>    

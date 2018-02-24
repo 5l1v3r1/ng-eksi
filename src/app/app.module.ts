@@ -10,9 +10,11 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { EntriesComponent } from './entries/entries.component';
 
 import {BakinizPipe, CharacterEscapePipe} from './custom.pipe';
+import { AboutComponent } from './about/about.component';
 
 const appRoutes: Routes = [
   { path: 'entry/:title/:pageNo', component: EntriesComponent },
+  { path: 'about', component: AboutComponent }
 ];
 
 @NgModule({
@@ -21,7 +23,8 @@ const appRoutes: Routes = [
     NavbarComponent,
     EntriesComponent,
     BakinizPipe,
-    CharacterEscapePipe
+    CharacterEscapePipe,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
