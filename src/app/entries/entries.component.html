@@ -3,7 +3,7 @@
   <div class="preloader" *ngIf="preloaderVisible">
     <div class="bg"></div>
   </div>
-
+  <p class="title">{{entries.Title}}</p>
   <div class="entry" *ngFor="let item of entries.Entries">
     <div class="content" [innerHTML] = "item.Content | bkz"></div>
     <div class="footer">
