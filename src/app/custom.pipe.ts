@@ -24,6 +24,10 @@ export class BakinizPipe implements PipeTransform {
       return `<a href="${p1}">${p1}</a>`;
     });
 
+    value = value.replace(/(https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|www\.[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9]\.[^\s]{2,}|www\.[a-zA-Z0-9]\.[^\s]{2,})/g, (match, p1: any) => {
+      return `<a href="${p1}">${p1}</a>`;
+    });
+
     return value;
   }
 }
