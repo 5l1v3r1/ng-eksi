@@ -20,7 +20,7 @@ export class BakinizPipe implements PipeTransform {
     });
 
     // Gizli link
-    value = value.replace(/\[([^ ]+) (.*)\]/g, (match, p1: string, p2: string) => {
+    value = value.replace(/\[(https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|www\.[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9]\.[^\s]{2,}|www\.[a-zA-Z0-9]\.[^\s]{2,}) ([^\]]*)\]/g, (match, p1: string, p2: string) => {
       return `<a href="${p1}">${p2}</a>`;
     });
 
