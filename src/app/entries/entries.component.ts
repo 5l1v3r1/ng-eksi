@@ -9,9 +9,6 @@ import { Location } from '@angular/common';
   styleUrls: ['./entries.component.sass']
 })
 
-
-
-
 export class EntriesComponent implements OnInit {
 
   
@@ -35,8 +32,6 @@ export class EntriesComponent implements OnInit {
         alert("Api Unavaible. /topic")
       })
   }
-
-
 
   ngOnInit() {
     this.route.params.forEach(params => {
