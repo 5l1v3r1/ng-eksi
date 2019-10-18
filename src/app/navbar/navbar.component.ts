@@ -26,7 +26,7 @@ export class NavbarComponent implements OnInit {
     this.searchBoxText = searchValue;
     if (searchValue.length > 3) {
       this.autoCompleteVisible = true;
-      this._http.get("https://eksisozluk.denizer.com/autocomplete/" + searchValue).
+      this._http.get("https://eksi.yigit.host/autocomplete/" + searchValue).
         subscribe(data => {
           this.autoCompleteResults = data['Titles'];
         },
@@ -41,7 +41,7 @@ export class NavbarComponent implements OnInit {
   }
 
   getPopular(){
-    this._http.get("https://eksisozluk.denizer.com/popular").subscribe(
+    this._http.get("https://eksi.yigit.host/popular").subscribe(
       data => {this.popularTitles = data['Topics'];
       this.popularVisible = true;
     
@@ -51,7 +51,7 @@ export class NavbarComponent implements OnInit {
   }
 
   getToday(){
-    this._http.get("https://eksisozluk.denizer.com/today").subscribe(
+    this._http.get("https://eksi.yigit.host/today").subscribe(
       data => {this.popularTitles = data['Topics'];
       this.todayVisible = true;
     
