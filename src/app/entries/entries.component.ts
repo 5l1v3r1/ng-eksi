@@ -20,7 +20,7 @@ export class EntriesComponent implements OnInit {
   getEntries(id:string, page:number) {
     this.preloaderVisible = true;
     this.entries = [];
-    this._http.get("https://eksisozluk.denizer.com/topic/" + id + "/" + page).subscribe(data => {
+    this._http.get("https://eksi.yigit.host/topic/" + id + "/" + page).subscribe(data => {
       this.preloaderVisible = false;
       this.entries = data;
       
