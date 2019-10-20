@@ -70,8 +70,6 @@ export class NavbarComponent implements OnInit {
     this.todayVisible = false;
   }
 
-
-
   onFocus() {
     if(this.searchBoxText == ""){
       this.autoCompleteVisible = true;
@@ -95,8 +93,6 @@ export class NavbarComponent implements OnInit {
     this.autoCompleteVisible = false;
   }
 
-  ngOnInit() {
-
-  }
+  ngOnInit() { }
 
 }
